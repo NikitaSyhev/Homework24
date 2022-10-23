@@ -1,4 +1,4 @@
-//Этот проект создан с помощью классического шаблона
+//Р­С‚РѕС‚ РїСЂРѕРµРєС‚ СЃРѕР·РґР°РЅ СЃ РїРѕРјРѕС‰СЊСЋ РєР»Р°СЃСЃРёС‡РµСЃРєРѕРіРѕ С€Р°Р±Р»РѕРЅР°
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -35,17 +35,17 @@ int main() {
 	setlocale(LC_ALL, "Russian");
 	int m, n;
 
-	std::cout << "Задание 1.\n";
-	std::cout << "Введите длину массива A: \n";
+	std::cout << "Task 1.\n";
+	std::cout << "Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РјР°СЃСЃРёРІР° A: \n";
 	std::cin >> n;
-	std::cout << "Введите длину массива B: \n";
+	std::cout << "Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ РјР°СЃСЃРёРІР° B: \n";
 	std::cin >> m;
 	int* A = new int[n];
 	int* B = new int[m];
-	std::cout << "Изначальный массив A:\n";
+	std::cout << "РР·РЅР°С‡Р°Р»СЊРЅС‹Р№ РјР°СЃСЃРёРІ A:\n";
 	fill_arr(A, n, 1, 10);
 	show_arr(A, n);
-	std::cout << "Изначальный массив B:\n";
+	std::cout << "РР·РЅР°С‡Р°Р»СЊРЅС‹Р№ РјР°СЃСЃРёРІ B:\n";
 	fill_arr(B, m, 1, 10);
 	show_arr(B, m);
 	int* C = new int[n + m];
@@ -53,23 +53,23 @@ int main() {
 		C[i] = A[i];
 	for (int i = n; i < m + n; i++)
 		C[i] = B[i - n];
-	std::cout << "Итоговый массив С:\n";
+	std::cout << "РС‚РѕРіРѕРІС‹Р№ РјР°СЃСЃРёРІ РЎ:\n";
 	show_arr(C, n + m);
 	delete[] A;
 	delete[] B;
 
 
-	std::cout << "Задание 2.\n";
+	std::cout << "Task 2.\n";
 	int size1, size2;
-	std::cout << "Введите текущую длину массива: \n";
+	std::cout << "Р’РІРµРґРёС‚Рµ С‚РµРєСѓС‰СѓСЋ РґР»РёРЅСѓ РјР°СЃСЃРёРІР°: \n";
 	std::cin >> size1;
 	int* arr = new int[size1];
 	fill_arr(arr, size1, 1, 10);
-	std::cout << "Вывод изначального массива: \n";
+	std::cout << "Р’С‹РІРѕРґ РёР·РЅР°С‡Р°Р»СЊРЅРѕРіРѕ РјР°СЃСЃРёРІР°: \n";
 	show_arr(arr, size1);
-	std::cout << "Введите новую длину массива: \n";
+	std::cout << "Р’РІРµРґРёС‚Рµ РЅРѕРІСѓСЋ РґР»РёРЅСѓ РјР°СЃСЃРёРІР°: \n";
 	std::cin >> size2;
-	std::cout << "Массив с измененной длиной: ";
+	std::cout << "РњР°СЃСЃРёРІ СЃ РёР·РјРµРЅРµРЅРЅРѕР№ РґР»РёРЅРѕР№: ";
 	resize_arr(arr, size1, size2);
 	
 	show_arr(arr, size2);
